@@ -5,7 +5,7 @@ import joblib
 # Load model
 model = joblib.load("dt_model.pkl")
 
-st.title("🚆 Train No-Show Predictor")
+st.title("🚆 Train Boarding Expecation Predictor")
 
 st.write("Enter journey details to predict if a passenger may not show up.")
 
@@ -17,9 +17,9 @@ departure_hour = st.slider("Departure Hour", 0, 23, 10)
 zone_congestion = st.slider("Zone Congestion Index", 0.0, 1.0, 0.5)
 seat_utilisation = st.slider("Seat Utilisation (%)", 0.0, 100.0, 70.0)
 
-is_weekend = st.selectbox("Weekend?", [0, 1])
-is_peak_hour = st.selectbox("Peak Hour?", [0, 1])
-is_night = st.selectbox("Night Departure?", [0, 1])
+is_weekend = st.selectbox("Weekend?", ["No", "Yes"])
+is_peak_hour = st.selectbox("Peak Hour?",["No", "Yes"])
+is_night = st.selectbox("Night Departure?",["No", "Yes"])
 
 # ---- FEATURE VECTOR (VERY IMPORTANT: SAME ORDER AS TRAINING) ----
 features = np.array([[
