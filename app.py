@@ -5,7 +5,7 @@ import joblib
 # Load model
 model = joblib.load("dt_model.pkl")
 
-st.title("🚆 Train Boarding Expecation Predictor")
+st.title("🚆 Train Boarding Expectation Predictor")
 
 st.write("Enter journey details to predict if a passenger may not show up.")
 
