@@ -5,7 +5,7 @@ import joblib
 # Load model
 model = joblib.load("dt_model.pkl")
 
-st.title("🚆 Train Boarding Expectation Predictor")
+st.title("🚆 RailSense: Smart Passenger Boarding Predictor for Indian Railways")
 
 st.write("Enter journey details to predict if a passenger may not show up.")
 
