@@ -17,9 +17,9 @@ departure_hour = st.slider("Departure Hour", 0, 23, 10)
 zone_congestion = st.slider("Zone Congestion Index", 0.0, 1.0, 0.5)
 seat_utilisation = st.slider("Seat Utilisation (%)", 0.0, 100.0, 70.0)
 
-is_weekend = st.selectbox("Weekend?", ["No", "Yes"])
-is_peak_hour = st.selectbox("Peak Hour?",["No", "Yes"])
-is_night = st.selectbox("Night Departure?",["No", "Yes"])
+is_weekend = st.selectbox("Weekend?", [0, 1])
+is_peak_hour = st.selectbox("Peak Hour?",[0, 1])
+is_night = st.selectbox("Night Departure?",[0, 1])
 
 # ---- FEATURE VECTOR (VERY IMPORTANT: SAME ORDER AS TRAINING) ----
 features = np.array([[
